@@ -9,3 +9,5 @@ export const getUsers = (state, filter) => {
         return users.filter(e=> e.name.toLowerCase().includes(filter.toLowerCase()))
     }
 }
+
+export const isLoading = (state) => state.users.isLoading;

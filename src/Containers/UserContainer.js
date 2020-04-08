@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchUsers, changeFilterUser} from '../actions/index'
-import {getUsers} from '../selectors/index'
+import {getUsers, isLoading} from '../selectors/index'
 import UserList from '../components/User/UserList'
 
 class UserContainer extends React.Component {
@@ -26,7 +26,7 @@ class UserContainer extends React.Component {
 const mapStateToProps = (state) => {
     return { 
         users: getUsers(state, state.users.filter),
-        isLoading: state.users.isLoading,
+        isLoading: isLoading(state),
     }
 
 }

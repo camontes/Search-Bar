@@ -27,7 +27,7 @@ const makeMapStateToProps = () => {
     const getUsersState = makeGetUsersState()
     const mapStateToProps = (state) => {
       return {
-         users: getUsersState(state, filterInput(state)),
+         users: getUsersState(state),
          isLoading: isLoading(state)
         }
     }

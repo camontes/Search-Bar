@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import {connect} from 'react-redux'
 import {fetchUsers, changeFilterUser} from '../actions/index'
 import {makeGetUsersState, isLoading, filterInput} from '../selectors/index'
 import UserList from '../components/User/UserList'
 
-class UserContainer extends React.Component {
+class UserContainer extends React.PureComponent{
 
     componentDidMount(){
         this.props.fetchUsers();

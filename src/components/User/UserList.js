@@ -1,6 +1,6 @@
 import React from 'react'
 
-class UserList extends React.Component {
+class UserList extends React.PureComponent {
 
     renderData = () =>{
         const {users, isLoading} = this.props;

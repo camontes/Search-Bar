@@ -1,3 +1,5 @@
+import { createSelector } from 'reselect'
+
 export const getUsers = (state, filter) => {
 
     const users = state.users.data;
@@ -10,4 +12,11 @@ export const getUsers = (state, filter) => {
     }
 }
 
+export const makeGetUsersState = () => createSelector(
+    [ getUsers ],
+    (users) => users
+)
+
 export const isLoading = (state) => state.users.isLoading;
+
+export const filterInput = (state) => state.users.filter;
